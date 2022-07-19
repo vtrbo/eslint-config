@@ -1,33 +1,37 @@
-# @vtrbo/eslint-config
-
-[![npm](https://img.shields.io/npm/v/@vtrbo/eslint-config?color=a1b858&label=)](https://npmjs.com/package/@vtrbo/eslint-config)
+# @vtrbo/eslint-config [![npm](https://img.shields.io/npm/v/@vtrbo/eslint-config?color=a1b858&label=)](https://npmjs.com/package/@vtrbo/eslint-config)
 
 Forked from [antfu/eslint-config](https://github.com/antfu/eslint-config)
 
-- 单引号
-- 无行尾分号
-
-## 使用说明
-
 ### 安装
+```shell
+@vtrbo/eslint-config
 
-```bash
-pnpm add -D eslint @vtrbo/eslint-config
+npm install -D eslint @vtrbo/eslint-config
+# or
+# yarn install -D eslint @vtrbo/eslint-config
+# pnpm install -D eslint @vtrbo/eslint-config
 ```
+> 或者引入单独的规则配置
+> - `@vtrbo/eslint-config-basic`
+> - `@vtrbo/eslint-config-react`
+> - `@vtrbo/eslint-config-vue`
+> - `@vtrbo/eslint-config-ts`
 
-### 配置 `.eslintrc`
-
+### 配置
+> `.eslintrc.json`
 ```json
 {
-  "extends": "@vtrbo"
+  "extends": "@vtrbo",
+  "rules": [
+    // 你的规则
+  ]
 }
 ```
 
 > 通常你不需要 .eslintignore，因为它已经由预置提供了。
 
-### 在 package.json 中添加脚本
-
-例如：
+### 脚本
+> `package.json`
 
 ```json
 {
@@ -38,10 +42,9 @@ pnpm add -D eslint @vtrbo/eslint-config
 }
 ```
 
-### 配置 VS Code 自动修复
-
-创建 `.vscode/settings.json`
-
+### VSCode
+> `.vscode/settings.json`
+> 
 ```json
 {
   "prettier.enable": false,
