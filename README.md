@@ -49,10 +49,6 @@ pnpm add -D eslint @vtrbo/eslint-config
 }
 ```
 
-## 感谢
-
-感谢@antfu，继承于@antfu/eslint-config，版本：0.23.0
-
 ## 开源许可证
 
-MIT
+[MIT](./LICENSE) License &copy; 2022-PRESENT [Victor Bo](https://github.com/vtrbo)
