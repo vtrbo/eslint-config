@@ -1,35 +1,31 @@
-# @antfu/eslint-config
+# @vtrbo/eslint-config
 
-[![npm](https://img.shields.io/npm/v/@antfu/eslint-config?color=a1b858&label=)](https://npmjs.com/package/@antfu/eslint-config)
+[![npm](https://img.shields.io/npm/v/@vtrbo/eslint-config?color=a1b858&label=)](https://npmjs.com/package/@vtrbo/eslint-config)
 
-- Single quotes, no semi
-- Auto fix for formatting (aimed to be used standalone without Prettier)
-- TypeScript, Vue, React out-of-box
-- Lint also for json, yaml, markdown
-- Sorted imports, dangling commas for cleaner commit diff
-- Reasonable defaults, best practices, only one-line of config
+- 单引号
+- 无行尾分号
 
-## Usage
+## 使用说明
 
-### Install
+### 安装
 
 ```bash
-pnpm add -D eslint @antfu/eslint-config
+pnpm add -D eslint @vtrbo/eslint-config
 ```
 
-### Config `.eslintrc`
+### 配置 `.eslintrc`
 
 ```json
 {
-  "extends": "@antfu"
+  "extends": "@vtrbo"
 }
 ```
 
-> You don't need `.eslintignore` normally as it has been provided by the preset.
+> 通常你不需要 .eslintignore，因为它已经由预置提供了。
 
-### Add script for package.json
+### 在 package.json 中添加脚本
 
-For example:
+例如：
 
 ```json
 {
@@ -40,9 +36,9 @@ For example:
 }
 ```
 
-### Config VS Code auto fix
+### 配置 VS Code 自动修复
 
-Create `.vscode/settings.json`
+创建 `.vscode/settings.json`
 
 ```json
 {
@@ -53,14 +49,10 @@ Create `.vscode/settings.json`
 }
 ```
 
-## Check Also
+## 感谢
 
-- [antfu/dotfiles](https://github.com/antfu/dotfiles) - My dotfiles
-- [antfu/vscode-settings](https://github.com/antfu/vscode-settings) - My VS Code settings
-- [antfu/eslint-config](https://github.com/antfu/eslint-config) - My ESLint config
-- [antfu/ts-starter](https://github.com/antfu/ts-starter) - My starter template for TypeScript library
-- [antfu/vitesse](https://github.com/antfu/vitesse) - My starter template for Vue & Vite app
+感谢@antfu，继承于@antfu/eslint-config，版本：0.23.0
 
-## License
+## 开源许可证
 
-[MIT](./LICENSE) License &copy; 2019-PRESENT [Anthony Fu](https://github.com/antfu)
+MIT

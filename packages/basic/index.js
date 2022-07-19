@@ -34,7 +34,7 @@ module.exports = {
   plugins: [
     'html',
     'unicorn',
-    'antfu',
+    'vtrbo',
   ],
   settings: {
     'import/resolver': {
@@ -301,7 +301,7 @@ module.exports = {
     'unicorn/prefer-includes': 'error',
     // String methods startsWith/endsWith instead of more complicated stuff
     'unicorn/prefer-starts-ends-with': 'error',
-    // textContent instead of innerText
+    // textContent instead of innerTexts
     'unicorn/prefer-text-content': 'error',
     // Enforce throwing type error when throwing error while checking typeof
     'unicorn/prefer-type-error': 'error',
@@ -330,9 +330,9 @@ module.exports = {
     'yml/quotes': ['error', { prefer: 'single', avoidEscape: false }],
     'yml/no-empty-document': 'off',
 
-    // antfu
-    'antfu/if-newline': 'error',
-    'antfu/import-dedupe': 'error',
-    // 'antfu/prefer-inline-type-import': 'error',
+    // vtrbo
+    'vtrbo/if-newline': 'error',
+    'vtrbo/import-dedupe': 'error',
+    // 'vtrbo/prefer-inline-type-import': 'error',
   },
 }
