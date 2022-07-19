@@ -1,4 +1,4 @@
-import { createEslintRule } from '../../src copy/utils'
+import { createEslintRule } from '../../src/utils'
 
 export const RULE_NAME = 'if-newline'
 export type MessageIds = 'missingIfNewline'
