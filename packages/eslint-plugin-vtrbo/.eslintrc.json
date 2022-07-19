@@ -1,0 +1,6 @@
+{
+  "extends": "@vtrbo",
+  "plugins": [
+    "vtrbo"
+  ]
+}
