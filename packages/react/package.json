@@ -15,9 +15,6 @@
   "scripts": {
     "lint": "eslint . --config=index.js"
   },
-  "peerDependencies": {
-    "eslint": ">=8.20.0"
-  },
   "dependencies": {
     "@vtrbo/eslint-config-ts": "workspace:*",
     "eslint-plugin-react": "^7.30.1"
