@@ -16,11 +16,11 @@
     "access": "public"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.31.0",
-    "@typescript-eslint/parser": "^5.31.0",
+    "@typescript-eslint/eslint-plugin": "^5.32.0",
+    "@typescript-eslint/parser": "^5.32.0",
     "@vtrbo/eslint-config-basic": "workspace:*"
   },
   "devDependencies": {
-    "eslint": "^8.20.0"
+    "eslint": "^8.21.0"
   }
 }
