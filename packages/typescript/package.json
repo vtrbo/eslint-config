@@ -1,0 +1,26 @@
+{
+  "name": "@vtrbo/eslint-config-ts",
+  "version": "0.0.6",
+  "description": "",
+  "author": "Victor Bo<vtrbo.qq.com> (https://github.com/vtrbo)",
+  "license": "MIT",
+  "homepage": "https://github.com/vtrbo/eslint-config",
+  "keywords": [
+    "eslint-config"
+  ],
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.31.0",
+    "@typescript-eslint/parser": "^5.31.0",
+    "@vtrbo/eslint-config-basic": "workspace:*"
+  },
+  "devDependencies": {
+    "eslint": "^8.20.0"
+  }
+}

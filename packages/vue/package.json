@@ -1,0 +1,22 @@
+{
+  "name": "@vtrbo/eslint-config-vue",
+  "version": "0.0.6",
+  "description": "",
+  "author": "Victor Bo<vtrbo.qq.com> (https://github.com/vtrbo)",
+  "license": "MIT",
+  "homepage": "https://github.com/vtrbo/eslint-config",
+  "keywords": [
+    "eslint-config"
+  ],
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "@vtrbo/eslint-config-ts": "workspace:*",
+    "eslint-plugin-vue": "^9.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.20.0"
+  }
+}

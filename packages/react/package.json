@@ -1,0 +1,27 @@
+{
+  "name": "@vtrbo/eslint-config-react",
+  "version": "0.0.6",
+  "description": "",
+  "author": "Victor Bo<vtrbo.qq.com> (https://github.com/vtrbo)",
+  "license": "MIT",
+  "homepage": "https://github.com/vtrbo/eslint-config",
+  "keywords": [
+    "eslint-config"
+  ],
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "lint": "eslint . --config=index.js"
+  },
+  "dependencies": {
+    "@vtrbo/eslint-config-ts": "workspace:*",
+    "eslint-plugin-react": "^7.30.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.20.0",
+    "react": "^18.2.0",
+    "typescript": "^4.7.4"
+  }
+}
