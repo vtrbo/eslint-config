@@ -1,6 +1,6 @@
 {
   "name": "@vtrbo/eslint-config",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "victor's eslint config",
   "author": "Victor Bo<vtrbo.qq.com> (https://github.com/vtrbo)",
   "license": "MIT",
