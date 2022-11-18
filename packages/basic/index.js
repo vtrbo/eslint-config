@@ -23,7 +23,7 @@ module.exports = {
     'coverage',
     'public',
     'temp',
-    'packages-lock.json',
+    'package-lock.json',
     'pnpm-lock.yaml',
     'yarn.lock',
     '__snapshots__',
@@ -35,6 +35,7 @@ module.exports = {
     'html',
     'unicorn',
     'vtrbo',
+    'no-only-tests',
   ],
   settings: {
     'import/resolver': {
@@ -155,6 +156,7 @@ module.exports = {
       files: ['*.test.ts', '*.test.js', '*.spec.ts', '*.spec.js'],
       rules: {
         'no-unused-expressions': 'off',
+        'no-only-tests/no-only-tests': 'error',
       },
     },
     {
@@ -283,6 +285,7 @@ module.exports = {
     'require-await': 'off',
     'no-return-assign': 'off',
     'operator-linebreak': ['error', 'before'],
+    'max-statements-per-line': ['error', { max: 1 }],
 
     // unicorns
     // Pass error message when throwing errors
@@ -301,7 +304,7 @@ module.exports = {
     'unicorn/prefer-includes': 'error',
     // String methods startsWith/endsWith instead of more complicated stuff
     'unicorn/prefer-string-starts-ends-with': 'error',
-    // textContent instead of innerTexts
+    // textContent instead of innerText
     'unicorn/prefer-text-content': 'error',
     // Enforce throwing type error when throwing error while checking typeof
     'unicorn/prefer-type-error': 'error',

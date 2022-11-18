@@ -1,8 +1,11 @@
 {
   "name": "@vtrbo/eslint-config",
   "version": "0.0.7",
-  "description": "victor's eslint config",
-  "author": "Victor Bo<vtrbo.qq.com> (https://github.com/vtrbo)",
+  "description": "Victor Bo's Eslint Config",
+  "author": {
+    "name": "Victor Bo",
+    "email": "hi@vtrbo.cn"
+  },
   "license": "MIT",
   "homepage": "https://github.com/vtrbo/eslint-config",
   "keywords": [
@@ -12,24 +15,26 @@
   "files": [
     "index.js"
   ],
+  "peerDependencies": {
+    "eslint": ">=7.4.0"
+  },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.33.0",
-    "@typescript-eslint/parser": "^5.33.0",
-    "@vtrbo/eslint-config-react": "workspace:*",
+    "@typescript-eslint/eslint-plugin": "^5.43.0",
+    "@typescript-eslint/parser": "^5.43.0",
     "@vtrbo/eslint-config-vue": "workspace:*",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-html": "^7.1.0",
     "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jsonc": "^2.3.1",
-    "eslint-plugin-n": "^15.2.4",
-    "eslint-plugin-promise": "^6.0.0",
-    "eslint-plugin-unicorn": "^43.0.2",
-    "eslint-plugin-vue": "^9.3.0",
-    "eslint-plugin-yml": "^1.1.0",
+    "eslint-plugin-jsonc": "^2.5.0",
+    "eslint-plugin-n": "^15.5.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-unicorn": "^44.0.2",
+    "eslint-plugin-vue": "^9.7.0",
+    "eslint-plugin-yml": "^1.2.0",
     "jsonc-eslint-parser": "^2.1.0",
     "yaml-eslint-parser": "^1.1.0"
   },
   "devDependencies": {
-    "eslint": "^8.22.0"
+    "eslint": "^8.27.0"
   }
 }

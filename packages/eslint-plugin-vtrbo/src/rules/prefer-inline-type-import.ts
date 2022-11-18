@@ -1,7 +1,7 @@
 // Ported from https://github.com/gajus/eslint-plugin-canonical/blob/master/src/rules/preferInlineTypeImport.js
 // by Gajus Kuizinas https://github.com/gajus
 
-import { createEslintRule } from '../../src/utils'
+import { createEslintRule } from '../utils'
 
 export const RULE_NAME = 'prefer-inline-type-import'
 export type MessageIds = 'preferInlineTypeImport'
