@@ -39,6 +39,7 @@ module.exports = {
     'unicorn',
     'vtrbo',
     'no-only-tests',
+    'unused-imports',
   ],
   settings: {
     'import/resolver': {
