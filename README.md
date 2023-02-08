@@ -44,13 +44,31 @@ npm install -D eslint @vtrbo/eslint-config
 
 ### VSCode
 > `.vscode/settings.json`
-> 
+
 ```json
 {
   "prettier.enable": false,
+  "editor.formatOnSave": false,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   }
+}
+```
+
+### TypeScript 感知规则
+
+- 在项目根目录中存在 `tsconfig.eslint.json` 时，将开启类型感知
+- 修改 `ESLINT_TSCONFIG` env 变量，更改 tsconfig 名称
+
+当在项目根目录中找到'  '时，类型感知规则被启用，这将为你的项目引入一些更严格的规则。如果你想在项目根目录中没有' tsconfig.eslint.json '的情况下启用它，你可以通过修改' ESLINT_TSCONFIG ' env来更改tsconfig名称
+
+> `.eslintrc.js`
+
+```js
+process.env.ESLINT_TSCONFIG = 'tsconfig.json'
+
+module.exports = {
+  extends: '@vtrbo'
 }
 ```
 
