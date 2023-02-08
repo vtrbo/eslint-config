@@ -17,10 +17,10 @@
   "devDependencies": {
     "@vtrbo/eslint-config": "*",
     "bumpp": "^8.2.1",
-    "eslint": "^8.27.0",
+    "eslint": "^8.33.0",
     "eslint-plugin-vtrbo": "workspace:*",
-    "pnpm": "^7.16.1",
-    "rimraf": "^3.0.2",
-    "typescript": "^4.9.3"
+    "pnpm": "^7.26.3",
+    "rimraf": "^4.1.2",
+    "typescript": "^4.9.5"
   }
 }
