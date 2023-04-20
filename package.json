@@ -10,7 +10,6 @@
   "homepage": "https://github.com/vtrbo/eslint-config",
   "scripts": {
     "lint": "eslint .",
-    "prepare": "pnpm -r run stub",
     "release": "bumpp -r && pnpm -r publish"
   },
   "devDependencies": {
