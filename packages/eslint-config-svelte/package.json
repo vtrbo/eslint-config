@@ -1,7 +1,7 @@
 {
-  "name": "@vtrbo/eslint-config-vue",
+  "name": "@vtrbo/eslint-config-svelte",
   "version": "0.3.0",
-  "description": "Victor Bo's Eslint Config Vue",
+  "description": "Victor Bo's Eslint Config Svelte",
   "author": {
     "name": "Victor Bo",
     "email": "hi@vtrbo.cn"
@@ -17,17 +17,18 @@
   ],
   "peerDependencies": {
     "eslint": ">=7.4.0",
-    "vue": "^2.0.0 || ^3.0.0"
+    "svelte": ">=3.37.0"
   },
   "peerDependenciesMeta": {
-    "vue": {
+    "svelte": {
       "optional": true
     }
   },
   "dependencies": {
     "@vtrbo/eslint-config-basic": "workspace:*",
     "@vtrbo/eslint-config-ts": "workspace:*",
-    "eslint-plugin-vue": "^9.11.0",
+    "eslint-define-config": "^1.18.0",
+    "eslint-plugin-svelte": "^2.26.0",
     "local-pkg": "^0.4.3"
   },
   "devDependencies": {
