@@ -20,6 +20,7 @@
     "eslint-plugin-antfu": "^0.38.5",
     "pnpm": "^8.3.1",
     "rimraf": "^5.0.0",
+    "taze": "^0.9.1",
     "typescript": "^5.0.4"
   }
 }
