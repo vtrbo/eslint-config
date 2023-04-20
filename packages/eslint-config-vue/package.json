@@ -1,0 +1,37 @@
+{
+  "name": "@vtrbo/eslint-config-vue",
+  "version": "0.2.2",
+  "description": "Victor Bo's Eslint Config Vue",
+  "author": {
+    "name": "Victor Bo",
+    "email": "hi@vtrbo.cn"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/vtrbo/eslint-config",
+  "keywords": [
+    "eslint-config"
+  ],
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "peerDependencies": {
+    "eslint": ">=7.4.0",
+    "vue": "^2.0.0 || ^3.0.0"
+  },
+  "peerDependenciesMeta": {
+    "vue": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "@vtrbo/eslint-config-basic": "workspace:*",
+    "@vtrbo/eslint-config-ts": "workspace:*",
+    "eslint-define-config": "^1.18.0",
+    "eslint-plugin-vue": "^9.11.0",
+    "local-pkg": "^0.4.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.38.0"
+  }
+}

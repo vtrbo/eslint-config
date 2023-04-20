@@ -1,0 +1,17 @@
+{
+  "prettier.enable": false,
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "cSpell.words": [
+    "antfu",
+    "ependencies",
+    "esmodule",
+    "Gajus",
+    "IIFE",
+    "Kuizinas",
+    "stroustrup",
+    "TSES"
+  ]
+}

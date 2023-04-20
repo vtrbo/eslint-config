@@ -1,0 +1,1 @@
+## @vtrbo/eslint-config
