@@ -1,6 +1,7 @@
 {
   "name": "@vtrbo/eslint-config-monorepo",
   "version": "0.3.2",
+  "private": true,
   "description": "Victor Bo's Eslint Config",
   "author": {
     "name": "Victor Bo",
@@ -10,7 +11,8 @@
   "homepage": "https://github.com/vtrbo/eslint-config",
   "scripts": {
     "lint": "eslint .",
-    "release": "bumpp -r && pnpm -r publish --access=public"
+    "lint:fix": "eslint . --fix",
+    "release": "bumpp -r && pnpm -r publish"
   },
   "devDependencies": {
     "@vtrbo/eslint-config": "workspace:*",
