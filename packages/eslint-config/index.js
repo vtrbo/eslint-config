@@ -5,4 +5,10 @@ module.exports = defineConfig({
     '@vtrbo/eslint-config-vue',
     '@vtrbo/eslint-config-svelte',
   ],
+  ignorePatterns: [
+    '~/',
+    '**/~/',
+    'node_modules/',
+    '**/node_modules/',
+  ],
 })

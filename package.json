@@ -10,7 +10,7 @@
   "homepage": "https://github.com/vtrbo/eslint-config",
   "scripts": {
     "lint": "eslint .",
-    "release": "bumpp -r && pnpm -r publish"
+    "release": "bumpp -r && pnpm -r publish --access=public"
   },
   "devDependencies": {
     "@vtrbo/eslint-config": "workspace:*",
