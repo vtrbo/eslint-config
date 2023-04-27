@@ -20,14 +20,14 @@
     "typescript": ">=3.9"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.59.0",
-    "@typescript-eslint/parser": "^5.59.0",
+    "@typescript-eslint/eslint-plugin": "^5.59.1",
+    "@typescript-eslint/parser": "^5.59.1",
     "@vtrbo/eslint-config-basic": "workspace:*",
-    "eslint-define-config": "^1.18.0",
+    "eslint-define-config": "^1.20.0",
     "eslint-plugin-jest": "^27.2.1"
   },
   "devDependencies": {
-    "eslint": "^8.38.0",
+    "eslint": "^8.39.0",
     "typescript": "^5.0.4"
   }
 }

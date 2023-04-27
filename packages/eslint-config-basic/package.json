@@ -22,7 +22,7 @@
     "eslint": ">=7.4.0"
   },
   "dependencies": {
-    "eslint-define-config": "^1.18.0",
+    "eslint-define-config": "^1.20.0",
     "eslint-plugin-antfu": "^0.38.5",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-html": "^7.1.0",
@@ -39,6 +39,6 @@
     "yaml-eslint-parser": "^1.2.0"
   },
   "devDependencies": {
-    "eslint": "^8.38.0"
+    "eslint": "^8.39.0"
   }
 }
