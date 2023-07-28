@@ -95,7 +95,7 @@ module.exports = defineConfig({
         'JSXClosingFragment',
         'JSXText',
         'JSXEmptyExpression',
-        'JSXSpreadChild'
+        'JSXSpreadChild',
       ],
       offsetTernaryExpressions: true,
     }],
