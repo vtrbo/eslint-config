@@ -1,6 +1,6 @@
 {
   "name": "@vtrbo/eslint-config-monorepo",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "private": true,
   "description": "Victor Bo's Eslint Config",
   "author": {

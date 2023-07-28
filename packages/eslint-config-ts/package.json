@@ -1,6 +1,6 @@
 {
   "name": "@vtrbo/eslint-config-ts",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "description": "Victor Bo's Eslint Config TypeScript",
   "author": {
     "email": "hi@vtrbo.cn",
