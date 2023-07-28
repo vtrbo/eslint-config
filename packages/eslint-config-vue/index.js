@@ -16,15 +16,13 @@ module.exports = !VUE
         parser: 'vue-eslint-parser',
         parserOptions: {
           parser: '@typescript-eslint/parser',
-          extraFileExtensions: ['.vue'],
-          ecmaFeatures: {
-            jsx: true,
-          },
         },
         rules: {
           'no-unused-vars': 'off',
           'no-undef': 'off',
-          ...(TS ? { '@typescript-eslint/no-unused-vars': 'off' } : null),
+          ...(TS
+            ? { '@typescript-eslint/no-unused-vars': 'off' }
+            : null),
         },
       },
     ],
@@ -40,6 +38,7 @@ module.exports = !VUE
       'vue/multi-word-component-names': 'off',
       'vue/prefer-import-from-vue': 'off',
       'vue/no-v-text-v-html-on-component': 'off',
+      'vue/no-dupe-keys': 'off',
 
       // reactivity transform
       'vue/no-setup-props-destructure': 'off',
@@ -55,7 +54,7 @@ module.exports = !VUE
       'vue/component-options-name-casing': ['error', 'PascalCase'],
       'vue/custom-event-name-casing': ['error', 'camelCase'],
       'vue/define-macros-order': ['error', {
-        order: ['defineProps', 'defineEmits'],
+        order: ['defineOptions', 'defineProps', 'defineEmits', 'defineSlots'],
       }],
       'vue/html-comment-content-spacing': ['error', 'always', {
         exceptions: ['-'],

@@ -10,20 +10,24 @@ module.exports = defineConfig({
     },
     sourceType: 'module',
   },
+
   env: {
     es2021: true,
     node: true,
   },
+
   plugins: [
     'import',
     'n',
     'promise',
   ],
+
   globals: {
     document: 'readonly',
     navigator: 'readonly',
     window: 'readonly',
   },
+
   rules: {
     'no-var': 'warn',
     'object-shorthand': ['warn', 'properties'],
@@ -91,7 +95,7 @@ module.exports = defineConfig({
         'JSXClosingFragment',
         'JSXText',
         'JSXEmptyExpression',
-        'JSXSpreadChild',
+        'JSXSpreadChild'
       ],
       offsetTernaryExpressions: true,
     }],
@@ -145,7 +149,7 @@ module.exports = defineConfig({
     'no-mixed-operators': ['error', {
       groups: [
         ['==', '!=', '===', '!==', '>', '>=', '<', '<='],
-        ['&&', '||', '?:'],
+        ['&&', '||'],
         ['in', 'instanceof'],
       ],
       allowSamePrecedence: true,

@@ -193,6 +193,8 @@ module.exports = defineConfig({
         '@typescript-eslint/no-var-requires': 'off',
         '@typescript-eslint/comma-dangle': 'off',
         '@typescript-eslint/consistent-type-imports': 'off',
+        '@typescript-eslint/no-namespace': 'off',
+        '@typescript-eslint/no-require-imports': 'off',
         'import/no-unresolved': 'off',
         'unused-imports/no-unused-imports': 'off',
         'unused-imports/no-unused-vars': 'off',
@@ -202,6 +204,9 @@ module.exports = defineConfig({
         'no-undef': 'off',
         'no-unused-expressions': 'off',
         'no-unused-vars': 'off',
+        'antfu/no-cjs-exports': 'off',
+        'antfu/no-ts-export-equal': 'off',
+        'n/prefer-global/process': 'off',
       },
     },
   ],
@@ -213,6 +218,7 @@ module.exports = defineConfig({
     'import/no-unresolved': 'off',
     'import/no-absolute-path': 'off',
     'import/newline-after-import': ['error', { count: 1, considerComments: true }],
+    'import/no-self-import': 'error',
 
     // Common
     'semi': ['error', 'never'],
@@ -238,7 +244,7 @@ module.exports = defineConfig({
     'no-debugger': 'error',
     'no-console': ['error', { allow: ['warn', 'error'] }],
     'no-cond-assign': ['error', 'always'],
-    'func-call-spacing': ['off', 'never'],
+    'func-call-spacing': 'off',
     'key-spacing': ['error', { beforeColon: false, afterColon: true }],
     'indent': ['error', 2, { SwitchCase: 1, VariableDeclarator: 1, outerIIFEBody: 1 }],
     'no-restricted-syntax': [
@@ -256,6 +262,19 @@ module.exports = defineConfig({
         named: 'never',
         asyncArrow: 'always',
       },
+    ],
+    'no-restricted-globals': [
+      'error',
+      { name: 'global', message: 'Use `globalThis` instead.' },
+      { name: 'self', message: 'Use `globalThis` instead.' },
+    ],
+    'no-restricted-properties': [
+      'error',
+      { property: '__proto__', message: 'Use `Object.getPrototypeOf` or `Object.setPrototypeOf` instead.' },
+      { property: '__defineGetter__', message: 'Use `Object.defineProperty` instead.' },
+      { property: '__defineSetter__', message: 'Use `Object.defineProperty` instead.' },
+      { property: '__lookupGetter__', message: 'Use `Object.getOwnPropertyDescriptor` instead.' },
+      { property: '__lookupSetter__', message: 'Use `Object.getOwnPropertyDescriptor` instead.' },
     ],
 
     // es6
@@ -305,7 +324,7 @@ module.exports = defineConfig({
     'array-callback-return': 'error',
     'block-scoped-var': 'error',
     'consistent-return': 'off',
-    'complexity': ['off', 11],
+    'complexity': 'off',
     'eqeqeq': ['error', 'smart'],
     'no-alert': 'warn',
     'no-case-declarations': 'error',
@@ -322,7 +341,7 @@ module.exports = defineConfig({
     'max-statements-per-line': ['error', { max: 1 }],
 
     // node
-    // 'n/prefer-global/process': ['error', 'never'], // Not sure if we need it as we are using `process.env.NODE_ENV` a lot in front-end.
+    'n/prefer-global/process': ['error', 'never'],
     'n/prefer-global/buffer': ['error', 'never'],
     'n/no-callback-literal': 'off',
 
@@ -351,6 +370,10 @@ module.exports = defineConfig({
     'unicorn/throw-new-error': 'error',
     // Prefer using the node: protocol
     'unicorn/prefer-node-protocol': 'error',
+    // Prefer using number properties like `Number.isNaN` rather than `isNaN`
+    'unicorn/prefer-number-properties': 'error',
+    // Ban `new Array` as `Array` constructor's params are ambiguous
+    'unicorn/no-new-array': 'error',
 
     'no-use-before-define': ['error', { functions: false, classes: false, variables: true }],
     'eslint-comments/disable-enable-pair': 'off',
