@@ -1,7 +1,7 @@
 const fs = require('node:fs')
 const { join } = require('node:path')
 const process = require('node:process')
-const basic = require('@antfu/eslint-config-basic')
+const basic = require('@vtrbo/eslint-config-basic')
 
 const { defineConfig } = require('eslint-define-config')
 
