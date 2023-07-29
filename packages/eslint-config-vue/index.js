@@ -27,8 +27,12 @@ module.exports = !VUE
       },
     ],
     extends: [
-      VV === 3 ? 'plugin:vue/vue3-recommended' : 'plugin:vue/recommended',
-      TS ? '@vtrbo/eslint-config-ts' : '@vtrbo/eslint-config-basic',
+      VV === 3
+        ? 'plugin:vue/vue3-recommended'
+        : 'plugin:vue/recommended',
+      TS
+        ? '@vtrbo/eslint-config-ts'
+        : '@vtrbo/eslint-config-basic',
     ],
     rules: {
       'vue/max-attributes-per-line': 'off',

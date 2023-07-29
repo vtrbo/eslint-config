@@ -28,7 +28,9 @@ module.exports = !SVELTE
     ],
     extends: [
       'plugin:svelte/recommended',
-      TS ? '@vtrbo/eslint-config-ts' : '@vtrbo/eslint-config-basic',
+      TS
+        ? '@vtrbo/eslint-config-ts'
+        : '@vtrbo/eslint-config-basic',
     ],
     rules: {
       'svelte/max-attributes-per-line': 'off',
