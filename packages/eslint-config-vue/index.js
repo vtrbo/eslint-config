@@ -28,9 +28,9 @@ module.exports = !VUE
       VV === 3
         ? 'plugin:vue/vue3-recommended'
         : 'plugin:vue/recommended',
-      // TS
-      //   ? '@vtrbo/eslint-config-ts'
-      //   : '@vtrbo/eslint-config-basic',
+      TS
+        ? '@vtrbo/eslint-config-ts'
+        : '@vtrbo/eslint-config-basic',
     ],
     rules: {
       'vue/max-attributes-per-line': 'off',
