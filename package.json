@@ -12,9 +12,7 @@
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "release": "bumpp -r && pnpm -r publish",
-    "updeps": "taze -w -I",
-    "updeps:major": "taze major -I"
+    "release": "bumpp -r && pnpm -r publish"
   },
   "devDependencies": {
     "@vtrbo/eslint-config": "workspace:*",
@@ -22,7 +20,6 @@
     "eslint": "^8.46.0",
     "pnpm": "^8.6.10",
     "rimraf": "^5.0.1",
-    "taze": "^0.11.2",
     "typescript": "^5.1.6"
   }
 }
