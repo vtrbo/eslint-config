@@ -61,7 +61,7 @@ module.exports = defineConfig({
   },
   overrides: [
     {
-      files: ['*.json', '*.json5', '*.jsonc', '*rc'],
+      files: ['*.json', '*.json5', '*.jsonc', '*rc', '!.npmrc'],
       parser: 'jsonc-eslint-parser',
       rules: {
         'jsonc/array-bracket-spacing': ['error', 'never'],
