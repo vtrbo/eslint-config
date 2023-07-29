@@ -20,9 +20,7 @@ module.exports = !VUE
         rules: {
           'no-unused-vars': 'off',
           'no-undef': 'off',
-          ...(TS
-            ? { '@typescript-eslint/no-unused-vars': 'off' }
-            : null),
+          ...(TS ? { '@typescript-eslint/no-unused-vars': 'off' } : {}),
         },
       },
     ],
@@ -30,9 +28,9 @@ module.exports = !VUE
       VV === 3
         ? 'plugin:vue/vue3-recommended'
         : 'plugin:vue/recommended',
-      TS
-        ? '@vtrbo/eslint-config-ts'
-        : '@vtrbo/eslint-config-basic',
+      // TS
+      //   ? '@vtrbo/eslint-config-ts'
+      //   : '@vtrbo/eslint-config-basic',
     ],
     rules: {
       'vue/max-attributes-per-line': 'off',

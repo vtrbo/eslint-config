@@ -21,6 +21,8 @@
   "dependencies": {
     "@vtrbo/eslint-config-svelte": "workspace:*",
     "@vtrbo/eslint-config-vue": "workspace:*",
+    "@vtrbo/eslint-config-basic": "workspace:*",
+    "@vtrbo/eslint-config-ts": "workspace:*",
     "eslint-define-config": "^1.21.0"
   },
   "devDependencies": {

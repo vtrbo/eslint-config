@@ -29,9 +29,15 @@ importers:
 
   packages/eslint-config:
     dependencies:
+      '@vtrbo/eslint-config-basic':
+        specifier: workspace:*
+        version: link:../eslint-config-basic
       '@vtrbo/eslint-config-svelte':
         specifier: workspace:*
         version: link:../eslint-config-svelte
+      '@vtrbo/eslint-config-ts':
+        specifier: workspace:*
+        version: link:../eslint-config-ts
       '@vtrbo/eslint-config-vue':
         specifier: workspace:*
         version: link:../eslint-config-vue
