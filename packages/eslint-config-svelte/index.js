@@ -8,30 +8,24 @@ module.exports = !SVELTE
   ? {}
   : defineConfig({
     overrides: [
-      TS
-        ? {
-            files: ['*.svelte'],
-            parser: 'svelte-eslint-parser',
-            parserOptions: {
-              parser: '@typescript-eslint/parser',
-            },
-            rules: {
-              'no-unused-vars': 'off',
-              'no-undef': 'off',
-              ...(TS ? { '@typescript-eslint/no-unused-vars': 'off' } : {}),
-            },
-          }
-        : {},
+      {
+        files: ['*.svelte'],
+        parser: TS ? '@typescript-eslint/parser' : 'svelte-eslint-parser',
+        plugins: TS ? ['@typescript-eslint'] : [],
+        parserOptions: {
+          parser: '@typescript-eslint/parser',
+        },
+      },
     ],
     extends: [
       TS
+        ? 'plugin:@typescript-eslint/recommended'
+        : {},
+      'plugin:svelte/recommended',
+      TS
         ? '@vtrbo/eslint-config-ts'
         : '@vtrbo/eslint-config-basic',
-      TS ? 'plugin:@typescript-eslint/recommended' : {},
-      'plugin:svelte/recommended',
     ],
-    parser: TS ? '@typescript-eslint/parser' : '',
-    plugins: TS ? ['@typescript-eslint'] : [],
     parserOptions: {
       sourceType: 'module',
       ecmaVersion: 2020,
