@@ -19,13 +19,13 @@
     "eslint": ">=7.4.0"
   },
   "dependencies": {
-    "@vtrbo/eslint-config-svelte": "workspace:*",
-    "@vtrbo/eslint-config-vue": "workspace:*",
     "@vtrbo/eslint-config-basic": "workspace:*",
+    "@vtrbo/eslint-config-svelte": "workspace:*",
     "@vtrbo/eslint-config-ts": "workspace:*",
-    "eslint-define-config": "^1.21.0"
+    "@vtrbo/eslint-config-vue": "workspace:*",
+    "eslint-define-config": "^1.23.0"
   },
   "devDependencies": {
-    "eslint": "^8.46.0"
+    "eslint": "^8.49.0"
   }
 }

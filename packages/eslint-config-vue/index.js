@@ -20,7 +20,9 @@ module.exports = !VUE
         rules: {
           'no-unused-vars': 'off',
           'no-undef': 'off',
-          ...(TS ? { '@typescript-eslint/no-unused-vars': 'off' } : {}),
+          ...(TS
+            ? { '@typescript-eslint/no-unused-vars': 'off' }
+            : null),
         },
       },
     ],
@@ -43,9 +45,9 @@ module.exports = !VUE
       'vue/no-dupe-keys': 'off',
 
       // reactivity transform
-      'vue/no-setup-props-destructure': 'off',
+      'vue/no-setup-props-reactivity-loss': 'off',
 
-      'vue/component-tags-order': ['error', {
+      'vue/block-order': ['error', {
         order: ['script', 'template', 'style'],
       }],
       'vue/block-tag-newline': ['error', {

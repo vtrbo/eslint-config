@@ -1,4 +1,8 @@
+const process = require('node:process')
 const { defineConfig } = require('eslint-define-config')
+
+const isInEditor = (process.env.VSCODE_PID || process.env.JETBRAINS_IDE) && !process.env.CI
+const offInEditor = isInEditor ? 'off' : 'error'
 
 module.exports = defineConfig({
   env: {
@@ -45,7 +49,7 @@ module.exports = defineConfig({
     '!.vitepress',
     '!.vscode',
     // force exclude
-    '.vitepress/cache',
+    '**/.vitepress/cache',
   ],
   plugins: [
     'html',
@@ -141,11 +145,20 @@ module.exports = defineConfig({
             order: { type: 'asc' },
           },
           {
+            pathPattern: '^resolutions$',
+            order: { type: 'asc' },
+          },
+          {
+            pathPattern: '^pnpm.overrides$',
+            order: { type: 'asc' },
+          },
+          {
             pathPattern: '^exports.*$',
             order: [
               'types',
-              'require',
               'import',
+              'require',
+              'default',
             ],
           },
         ],
@@ -226,7 +239,7 @@ module.exports = defineConfig({
     'quotes': ['error', 'single'],
     'quote-props': ['error', 'consistent-as-needed'],
 
-    'unused-imports/no-unused-imports': 'error',
+    'unused-imports/no-unused-imports': offInEditor,
     'unused-imports/no-unused-vars': [
       'warn',
       { vars: 'all', varsIgnorePattern: '^_', args: 'after-used', argsIgnorePattern: '^_' },
@@ -397,6 +410,7 @@ module.exports = defineConfig({
     'yml/no-empty-document': 'off',
 
     // antfu
+    'antfu/no-import-node-modules-by-path': 'error',
     'antfu/if-newline': 'error',
     'antfu/import-dedupe': 'error',
     'antfu/top-level-function': 'error',

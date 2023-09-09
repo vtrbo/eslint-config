@@ -27,11 +27,11 @@
   "dependencies": {
     "@vtrbo/eslint-config-basic": "workspace:*",
     "@vtrbo/eslint-config-ts": "workspace:*",
-    "eslint-define-config": "^1.21.0",
-    "eslint-plugin-svelte": "^2.32.4",
+    "eslint-define-config": "^1.23.0",
+    "eslint-plugin-svelte": "^2.33.0",
     "local-pkg": "^0.4.3"
   },
   "devDependencies": {
-    "eslint": "^8.46.0"
+    "eslint": "^8.49.0"
   }
 }
