@@ -7,24 +7,14 @@ const TS = isPackageExists('typescript')
 module.exports = !SVELTE
   ? {}
   : defineConfig({
-    overrides: [
-      {
-        files: ['*.svelte'],
-        parser: TS ? '@typescript-eslint/parser' : 'svelte-eslint-parser',
-        plugins: TS ? ['@typescript-eslint'] : [],
-        parserOptions: {
-          parser: '@typescript-eslint/parser',
-        },
-      },
-    ],
     extends: [
+      TS
+        ? '@vtrbo/eslint-config-ts'
+        : '@vtrbo/eslint-config-basic',
       TS
         ? 'plugin:@typescript-eslint/recommended'
         : {},
       'plugin:svelte/recommended',
-      TS
-        ? '@vtrbo/eslint-config-ts'
-        : '@vtrbo/eslint-config-basic',
     ],
     parserOptions: {
       sourceType: 'module',
@@ -36,6 +26,18 @@ module.exports = !SVELTE
       es2017: true,
       node: true,
     },
+    overrides: [
+      {
+        files: ['*.svelte'],
+        parser: 'svelte-eslint-parser',
+        plugins: TS ? ['@typescript-eslint'] : [],
+        parserOptions: TS
+          ? {
+              parser: '@typescript-eslint/parser',
+            }
+          : {},
+      },
+    ],
     rules: {
       '@typescript-eslint/nk-explicit-any': 'off',
       '@typescript-eslint/ban-ts-comment': 'off',
