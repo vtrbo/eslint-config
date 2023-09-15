@@ -19,7 +19,7 @@
     "@vtrbo/eslint-config": "workspace:*",
     "bumpp": "^9.2.0",
     "eslint": "^8.49.0",
-    "pnpm": "^8.7.4",
+    "pnpm": "^8.7.5",
     "rimraf": "^5.0.1",
     "taze": "^0.11.2",
     "typescript": "^5.2.2"
