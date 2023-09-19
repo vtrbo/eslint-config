@@ -36,6 +36,13 @@ module.exports = !SVELTE
               parser: '@typescript-eslint/parser',
             }
           : {},
+        rules: {
+          'no-unused-vars': 'off',
+          'no-undef': 'off',
+          ...(TS
+            ? { '@typescript-eslint/no-unused-vars': 'off' }
+            : null),
+        },
       },
     ],
     rules: {
@@ -46,5 +53,6 @@ module.exports = !SVELTE
       '@typescript-eslint/nk-non-null-assertion': 'off',
       '@typescript-eslint/no-explicit-any': 'off',
       'svelte/no-at-html-tags': 'off',
+      'import/no-mutable-exports': 'off',
     },
   })

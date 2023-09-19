@@ -20,6 +20,7 @@ module.exports = defineConfig({
     'plugin:markdown/recommended',
   ],
   ignorePatterns: [
+    '.DS_Store',
     '*.min.*',
     '*.d.ts',
     'CHANGELOG.md',
@@ -50,6 +51,7 @@ module.exports = defineConfig({
     '!.vscode',
     // force exclude
     '**/.vitepress/cache',
+    '**/.svelte-kit',
   ],
   plugins: [
     'html',
