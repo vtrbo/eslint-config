@@ -7,39 +7,28 @@ const TS = isPackageExists('typescript')
 module.exports = !SVELTE
   ? {}
   : defineConfig({
-    extends: [
-      // 'eslint:recommended',
-      TS
-        ? '@vtrbo/eslint-config-ts'
-        : '@vtrbo/eslint-config-basic',
-      TS
-        ? 'plugin:@typescript-eslint/recommended'
-        : null,
-      'plugin:svelte/recommended',
-    ].filter(Boolean),
-    parser: TS ? '@typescript-eslint/parser' : 'babel-eslint',
-    plugins: TS ? ['@typescript-eslint'] : [],
-    parserOptions: {
-      sourceType: 'module',
-      ecmaVersion: 2020,
-      extraFileExtensions: ['.svelte'],
-    },
-    env: {
-      browser: true,
-      es2017: true,
-      node: true,
-    },
     overrides: [
       {
         files: ['*.svelte'],
         parser: 'svelte-eslint-parser',
-        parserOptions: TS
-          ? {
-              parser: '@typescript-eslint/parser',
-            }
-          : {},
+        parserOptions: {
+          parser: '@typescript-eslint/parser',
+        },
+        rules: {
+          'no-unused-vars': 'off',
+          'no-undef': 'off',
+          ...(TS
+            ? { '@typescript-eslint/no-unused-vars': 'off' }
+            : null),
+        },
       },
     ],
+    extends: [
+      'plugin:svelte/recommended',
+      TS
+        ? '@vtrbo/eslint-config-ts'
+        : '@vtrbo/eslint-config-basic',
+    ].filter(Boolean),
     rules: {
       '@typescript-eslint/nk-explicit-any': 'off',
       '@typescript-eslint/ban-ts-comment': 'off',
