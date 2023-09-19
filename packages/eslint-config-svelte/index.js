@@ -20,6 +20,8 @@ module.exports = !SVELTE
           ...(TS
             ? { '@typescript-eslint/no-unused-vars': 'off' }
             : null),
+          'import/no-mutable-exports': 'off',
+          'unused-imports/no-unused-vars': 'off',
         },
       },
     ],
