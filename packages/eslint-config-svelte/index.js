@@ -8,14 +8,17 @@ module.exports = !SVELTE
   ? {}
   : defineConfig({
     extends: [
+      // 'eslint:recommended',
       TS
         ? '@vtrbo/eslint-config-ts'
         : '@vtrbo/eslint-config-basic',
       TS
         ? 'plugin:@typescript-eslint/recommended'
-        : {},
+        : null,
       'plugin:svelte/recommended',
-    ],
+    ].filter(Boolean),
+    parser: TS ? '@typescript-eslint/parser' : 'babel-eslint',
+    plugins: TS ? ['@typescript-eslint'] : [],
     parserOptions: {
       sourceType: 'module',
       ecmaVersion: 2020,
@@ -30,19 +33,11 @@ module.exports = !SVELTE
       {
         files: ['*.svelte'],
         parser: 'svelte-eslint-parser',
-        plugins: TS ? ['@typescript-eslint'] : [],
         parserOptions: TS
           ? {
               parser: '@typescript-eslint/parser',
             }
           : {},
-        rules: {
-          'no-unused-vars': 'off',
-          'no-undef': 'off',
-          ...(TS
-            ? { '@typescript-eslint/no-unused-vars': 'off' }
-            : null),
-        },
       },
     ],
     rules: {
@@ -53,6 +48,5 @@ module.exports = !SVELTE
       '@typescript-eslint/nk-non-null-assertion': 'off',
       '@typescript-eslint/no-explicit-any': 'off',
       'svelte/no-at-html-tags': 'off',
-      'import/no-mutable-exports': 'off',
     },
   })
